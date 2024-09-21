@@ -380,23 +380,185 @@
 
 
 
+/*Recuperar Usuario*//*Recuperar Usuario*//*Recuperar Usuario*//*Recuperar Usuario*//*Recuperar Usuario*/
+/*Recuperar Usuario*//*Recuperar Usuario*//*Recuperar Usuario*//*Recuperar Usuario*//*Recuperar Usuario*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
+#fondo-recuperar-usuario {
+    background-image: url('../assets/Fondo.png');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
+#encabezado-recuperar-usuario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
+#izquierda-recuperar-usuario {
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+}
 
+#logo-recuperar-usuario {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
 
+#izquierda-recuperar-usuario h1 {
+    color: white;
+    font-size: 20px;
+}
 
+#derecha-recuperar-usuario {
+    color: white;
+    font-size: 16px;
+    width: 66.67%;
+    display: flex;
+    justify-content: flex-end;
+}
 
+#boton-encabezado-recuperar-usuario {
+    background-color: #4EBDA9;
+    color: white;
+    border: none; /* Sin borde */
+    border-radius: 17px;
+    padding: 10px;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
+#registrarse-encabezado-recuperar-usuario {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
 
+#cuerpo-recuperar-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px);
+    margin-top: 150px;
+}
 
+#cuadro1-recuperar-usuario, #cuadro2-recuperar-usuario {
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
+}
 
+#cuadro1-recuperar-usuario {
+    background-color: #ACA1A1;
+    width: 650px; /* Aumentar el ancho */
+    height: 500px; /* Aumentar la altura */
+}
 
+#titulo-cuadro1-recuperar-usuario {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
 
+#instruccion-cuadro1-recuperar-usuario {
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+}
 
+#correo-recuperar-usuario,
+#celular-recuperar-usuario {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none; /* Sin borde */
+    font-size: 16px;
+}
 
+#boton-recuperar-correo,
+#boton-recuperar-celular {
+    background-color: #4EBDA9;
+    color: white;
+    border: none; /* Sin borde */
+    border-radius: 17px;
+    padding: 10px;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center; /* Centrado */
+}
 
+#cuadro2-recuperar-usuario {
+    background-color: rgba(98, 56, 56, 0.9);
+    width: 650px; /* Aumentar el ancho */
+    height: 400px; /* Aumentar la altura */
+}
 
+#titulo-cuadro2-recuperar-usuario {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
 
+#descripcion-cuadro2-recuperar-usuario {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
 
+@media (max-width: 768px) {
+    #cuadro1-recuperar-usuario, #cuadro2-recuperar-usuario {
+        width: 90%;
+    }
+
+    #titulo-cuadro1-recuperar-usuario,
+    #titulo-cuadro2-recuperar-usuario {
+        font-size: 30px;
+    }
+
+    #boton-recuperar-correo,
+    #boton-recuperar-celular {
+        width: 100%;
+    }
+
+    #boton-encabezado-recuperar-usuario {
+        width: 100px;
+    }
+}
