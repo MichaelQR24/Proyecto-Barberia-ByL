@@ -181,3 +181,41 @@ main .servicios-m {
     height: auto; /* Mantener la proporción de las imágenes */
     border-radius: 5px; /* Bordes redondeados para las imágenes */
 }
+
+/* PRODUCTOS */
+.producto-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los divs se distribuyan en varias filas */
+    justify-content: space-between; /* Distribuye el espacio entre los divs */
+}
+
+.producto-box {
+    background-color: #2C2C2C;
+    width: calc(20% - 15px); /* Ajusta el ancho para 5 divs por fila, con margen */
+    margin: 5px; /* Espacio entre los divs */
+    height: 300px; /* Aumenta la altura para que las imágenes quepan */
+    display: flex;
+    flex-direction: column; /* Organiza elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto-box img {
+    width: 60%; /* Ancho de la imagen */
+    height: 200px; /* Ajusta la altura para que se vea bien */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+}
+
+.producto-box p {
+    color: white;
+    margin: 0; /* Elimina el margen del párrafo */
+    text-align: center; /* Centra el texto */
+    font-size: 0.9rem; /* Ajusta el tamaño del texto si es necesario */
+}
+
+
