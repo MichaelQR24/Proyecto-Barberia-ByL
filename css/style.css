@@ -121,49 +121,63 @@ footer p {
 }
 
 /* SERVICIOS */
-.container {
+
+/* Estilo general para main */
+main .servicios-m {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    height: 100vh;
+    align-items: flex-start; /* Cambiado a flex-start para alinear en la parte superior */
+    width: 70%;
+    margin: 0 auto;
+    height: 100vh; /* para centrar verticalmente en la pantalla */
 }
 
-.rectangle {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    width: 30%; /* Ajusta este valor según sea necesario */
-    min-height: 500px; /* Ajusta la altura mínima según prefieras */
+/* Estilo para los rectángulos */
+.service-box {
+    background-color: #f0f0f0;
+    width: 30%;
+    height: 600px; /* Altura aumentada */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Permite alinear elementos verticalmente */
+    justify-content: flex-start; /* Alinear contenido en la parte superior */
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 20px; /* Espacio adicional en la parte superior */
 }
-.estilismo-personalizado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.service-box h2 {
+    margin: 0; /* Eliminar margen para que no sobresalga */
+    padding: 10px 0; /* Espacio adicional alrededor del título */
 }
 
-.estilismo-personalizado h2 {
-    margin-bottom: 30px;
-    font-size: 28px; /* Aumenta el tamaño del título */
-    color: #333; /* Color más oscuro para mejor contraste */
-}
-
-.image-gallery {
+/* Estilo para la cuadrícula de imágenes */
+.images-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Aumentado para más espacio entre imágenes */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: 600px; /* Limita el ancho máximo de la galería */
-    margin-top: 30px; /* Espacio adicional arriba de la galería */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    gap: 10px; /* Espacio entre las imágenes */
+    margin-top: 20px; /* Espacio superior para separar el título de las imágenes */
+    justify-items: center; /* Centrar imágenes horizontalmente dentro de la cuadrícula */
 }
 
-.image-gallery img {
-    width: 100%;
-    height: auto;
-    max-width: 250px; /* Aumentado para imágenes más grandes */
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
+/* Estilo para las imágenes */
+.images-grid img {
+    width: 90%; /* Hacer que las imágenes ocupen el ancho casi completo del contenedor */
+    height: auto; /* Mantener la proporción de las imágenes */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.treatments-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 10px; /* Espacio entre las imágenes */
+    margin-top: 20px; /* Espacio superior para separar el título de las imágenes */
+    justify-items: center; /* Centrar imágenes horizontalmente dentro de la cuadrícula */
+}
+
+.treatments-grid img {
+    width: 90%; /* Ancho casi completo del contenedor */
+    height: auto; /* Mantener la proporción de las imágenes */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
 }
