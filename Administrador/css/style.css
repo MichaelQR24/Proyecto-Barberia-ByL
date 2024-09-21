@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 60px 80px 60px 80px;
-    background-image: url('/assets/barber-background.jpg');
+    background-image: url('../assets/barber-background.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
