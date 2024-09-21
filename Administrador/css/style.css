@@ -96,3 +96,61 @@ p {
 .collapse td {
     background-color: #f1f1f1;
 }
+
+
+
+/* Menu Administrador 2 */
+.sidebar {
+    height: 100vh;
+    background-color: #343a40;
+    padding: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+
+.sidebar img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.filters .form-select {
+    margin-right: 10px;
+}
+
+.table tbody tr.bg-warning {
+    background-color: #ffeeba;
+}
+
+.table tbody tr.bg-light {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr.bg-danger {
+    background-color: #dc3545;
+}
+
+.table tbody tr.bg-success {
+    background-color: #28a745;
+}
+
+.table tbody tr.bg-success.text-white {
+    color: white;
+}
+
+button.btn-sm {
+    margin-left: 10px;
+}
