@@ -8,44 +8,26 @@
 </head>
 <body>
     <div id="fondo-login-usuario"></div>
-    <header id="encabezado-login-usuario">
-        <div id="izquierda-login-usuario">
-            <img src="./assets/LogoByL.png" alt="Logo" id="logo-login-usuario">
-            <h1>Barbería ByL</h1>
-        </div>
-        <div id="derecha-login-usuario">
-            <form id="formulario-login-usuario">
-                <div class="campo-formulario-login-usuario">
-                    <label for="correo-login-usuario">Correo Electrónico:</label>
-                    <input type="email" id="correo-login-usuario" placeholder="Ingresa tu correo">
-                </div>
-                <div class="campo-formulario-login-usuario">
-                    <label for="password-login-usuario">Contraseña:</label>
-                    <input type="password" id="password-login-usuario" placeholder="Ingresa tu contraseña">
-                </div>
-                <div id="botones-formulario-login-usuario">
-                    <button type="submit" id="boton-login-usuario">Entrar</button>
-                    <a href="#" id="olvide-password-login-usuario">¿Olvidaste tu contraseña?</a>
-                </div>
-            </form>
-        </div>
-    </header>
     <main id="cuerpo-login-usuario">
         <div id="cuadro1-login-usuario">
             <h2 id="titulo-cuadro1-login-usuario">Iniciar sesión</h2>
             <form id="formulario-cuadro1-login-usuario">
-                <label for="correo-cuadro1-login-usuario">Correo Electrónico:</label>
-                <input type="email" id="correo-cuadro1-login-usuario" placeholder="Ingresa tu correo">
-                <label for="password-cuadro1-login-usuario">Contraseña:</label>
-                <input type="password" id="password-cuadro1-login-usuario" placeholder="Ingresa tu contraseña">
-                <button id="boton-cuadro1-login-usuario">Entrar</button>
-                <a href="#" id="olvide-password-cuadro1-login-usuario">¿Olvidaste tu contraseña?</a>
+                <div class="campo-formulario-login-usuario">
+                    <label for="correo-cuadro1-login-usuario">Correo Electrónico:</label>
+                    <input type="email" id="correo-cuadro1-login-usuario" placeholder="Ingresa tu correo">
+                </div>
+                <div class="campo-formulario-login-usuario">
+                    <label for="password-cuadro1-login-usuario">Contraseña:</label>
+                    <input type="password" id="password-cuadro1-login-usuario" placeholder="Ingresa tu contraseña">
+                </div>
+                <button type="button" id="boton-cuadro1-login-usuario" onclick="window.location.href='/index.html'">Entrar</button>
+                <a href="pages/recuperar_usuario.html" id="olvide-password-cuadro1-login-usuario">¿Olvidaste tu contraseña?</a>
             </form>
         </div>
         <div id="cuadro2-login-usuario">
             <h2 id="titulo-cuadro2-login-usuario">¿Aún no tienes una cuenta?</h2>
             <p id="descripcion-cuadro2-login-usuario">Regístrate para que puedas iniciar sesión</p>
-            <button id="boton-cuadro2-login-usuario">Regístrate</button>
+            <button id="boton-cuadro2-login-usuario" onclick="window.location.href='pages/registrate_usuario.html'">Regístrate</button>
         </div>
     </main>
 </body>

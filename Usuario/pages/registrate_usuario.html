@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate SORBINO</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="fondo-registrate-usuario"></div>
+    <header id="encabezado-registrate-usuario">
+        <div id="izquierda-registrate-usuario">
+            <a href="/index.html">
+                <img src="../assets/LogoByL.png" alt="Logo" id="logo-registrate-usuario">
+            </a>
+            <h1>Barbería ByL</h1>
+        </div>
+        <div id="derecha-registrate-usuario">
+            <form id="formulario-encabezado-registrate-usuario">
+                <div class="campo-formulario-encabezado-registrate-usuario">
+                    <label for="correo-encabezado-registrate-usuario">Correo Electrónico:</label>
+                    <input type="email" id="correo-encabezado-registrate-usuario" placeholder="Ingresa tu correo">
+                </div>
+                <div class="campo-formulario-encabezado-registrate-usuario">
+                    <label for="password-encabezado-registrate-usuario">Contraseña:</label>
+                    <input type="password" id="password-encabezado-registrate-usuario" placeholder="Ingresa tu contraseña">
+                </div>
+                <div id="botones-encabezado-registrate-usuario">
+                    <button type="submit" id="boton-encabezado-registrate-usuario">Entrar</button>
+                    <a href="recuperar_usuario.html" id="olvide-password-encabezado-registrate-usuario">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main id="cuerpo-registrate-usuario">
+        <div id="cuadro1-registrate-usuario">
+            <h2 id="titulo-cuadro1-registrate-usuario">Regístrate</h2>
+            <form id="formulario-cuadro1-registrate-usuario">
+                <div>
+                    <input type="text" id="nombres-registrate-usuario" placeholder="Nombres" required>
+                    <input type="text" id="apellidos-registrate-usuario" placeholder="Apellidos" required>
+                </div>
+                <input type="email" id="correo-registrate-usuario" placeholder="Correo Electrónico" required>
+                <input type="number" id="celular-registrate-usuario" placeholder="Número de celular" required>
+                <input type="password" id="password-registrate-usuario" placeholder="Contraseña" required>
+                
+                <select id="genero-registrate-usuario" required>
+                    <option value="" disabled selected>--Seleccionar Género--</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="varon">Varón</option>
+                    <option value="no_decirlo">Prefiero no decirlo</option>
+                </select>
+                
+                <button type="submit" id="boton-cuadro1-registrate-usuario">Registrarse</button> <!-- Redirección para el registro -->
+            </form>
+        </div>
+        <div id="cuadro2-registrate-usuario">
+            <h2 id="titulo-cuadro2-registrate-usuario">¡Únete y Ahorra en tu Primer Corte!</h2>
+            <p id="descripcion-cuadro2-registrate-usuario">Regístrate y disfruta de un 15% de descuento en tu primera visita. Solo para miembros registrados. ¡No te lo pierdas!</p>
+            <a href="/index.html"><img src="../assets/LogoByL.png" alt="Logo" id="logo-cuadro2-registrate-usuario"></a> <!-- Redirección al index -->
+        </div>
+    </main>
+</body>
+</html>
