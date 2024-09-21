@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Gestión de Barbería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row" style="height: 100vh;">
+            <div class="col-md-2 sidebar bg-light">
+                <div class="logo text-center mt-4 mb-4">
+                    <img src="../img/barber-logo.jpg" alt="Logo" class="img-fluid rounded-circle" style="width: 80px;">
+                </div>
+                <ul class="nav flex-column text-center">
+                    <li class="nav-item">
+                        <a href="../pages/menu_administrador_citas.html" class="nav-link"><img src="../img/Citas img.png" alt="Icon 1"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/menu_administrador_locales.html" class="nav-link"><img src="../img/Locales img.png" alt="Icon 2"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/menu_administrador_servicios.html" class="nav-link"><img src="../img/Servicios img.png" alt="Icon 3"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/menu_administrador_productos.html" class="nav-link"><img src="../img/Productos img.png" alt="Icon 4"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/menu_administrador_aprovisionamiento.html" class="nav-link"><img src="../img/Aprovisionamieto.png" alt="Icon 5"></a>
+                    </li>
+                    <li class="nav-item nav-link_user" style=" margin-top: 70px !important;"></li>
+                        <a href="#" class="nav-link "><img src="../img/User image.png" alt="Icon 5"></a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="col-md-10 main-content">
+                <h1 class="my-5">Sistema Gestión de Barbería</h1>
+                <h2 class="my-5">Gestión de Citas</h2>
+    
+                <div class="filters mb-4">
+                    <select class="form-select d-inline-block" style="width: 150px;">
+                        <option selected>Semana</option>
+                    </select>
+                    <select class="form-select d-inline-block" style="width: 150px;">
+                        <option selected>Servicio</option>
+                    </select>
+                    <select class="form-select d-inline-block" style="width: 150px;">
+                        <option selected>Turno</option>
+                    </select>
+                    <select class="form-select d-inline-block" style="width: 150px;">
+                        <option selected>Empleado</option>
+                    </select>
+                </div>
+    
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>N°</th>
+                                <th>Empleado</th>
+                                <th>Fecha</th>
+                                <th>Sede</th>
+                                <th>Tipo de Servicio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-warning">
+                                <td>1</td>
+                                <td>Empleado 1</td>
+                                <td>Fecha</td>
+                                <td>Sede</td>
+                                <td>Tipo de Servicio</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Estado:</strong> Pendiente <span class="text-warning">●</span> <br>
+                                            <strong>Cliente:</strong> Omar Reyna
+                                        </div>
+                                        <div>
+                                            <strong>Turno:</strong> 12:00 - 13:00
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-success btn-sm">Validar Cita</button>
+                                            <button class="btn btn-danger btn-sm">Cancelar Cita</button>
+                                            <button class="btn btn-secondary btn-sm">Editar Cita</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td>2</td>
+                                <td>Empleado 2</td>
+                                <td>Fecha</td>
+                                <td>Sede</td>
+                                <td>Tipo de Servicio</td>
+                            </tr>
+                            <tr class="bg-danger text-white">
+                                <td>3</td>
+                                <td>Empleado 3</td>
+                                <td>Fecha</td>
+                                <td>Sede</td>
+                                <td>Tipo de Servicio</td>
+                            </tr>
+                            <tr class="bg-success text-white">
+                                <td>4</td>
+                                <td>Empleado 4</td>
+                                <td>Fecha</td>
+                                <td>Sede</td>
+                                <td>Tipo de Servicio</td>
+                            </tr>
+                            <tr class="bg-success text-white">
+                                <td>5</td>
+                                <td>Empleado 5</td>
+                                <td>Fecha</td>
+                                <td>Sede</td>
+                                <td>Tipo de Servicio</td>
+                            </tr>
+                            <tr class="bg-success text-white">
+                                <td>6</td>
+                                <td>Empleado 6</td>
+                                <td>Fecha</td>
+                                <td>Sede</td>
+                                <td>Tipo de Servicio</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
