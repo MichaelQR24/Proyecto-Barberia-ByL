@@ -10,7 +10,7 @@
 <body>
     <div class="container-fluid">
         <div class="row vh-100">
-            <div class="col-1 bg-light sidebar">
+            <div class="col-1 bg-light sidebar position-relative">
                 <div class="text-center mt-3">
                     <img src="img/barber-logo.jpg" alt="Logo" class="img-fluid" style="width: 80px;">
                 </div>
@@ -35,12 +35,16 @@
                     </ul>
                 </div>
 
-                <div class="text-center mt-auto mb-3">
+                <div class="text-center position-absolute bottom-0 w-100 mb-3">
                     <img src="img/User image.png" alt="Usuario" class="img-fluid rounded-circle" style="width: 60px;">
                     <div class="mt-2">
-                        <button class="btn btn-danger">Salir</button>
+                        <!-- Imagen que actúa como botón para salir -->
+                        <a href="logout.html">
+                            <img src="img/exit-icon.png" alt="Salir" class="img-fluid" style="width: 40px;">
+                        </a>
                     </div>
                 </div>
+                
             </div>
 
             <div class="col-0.5 separator bg-dark"></div>
