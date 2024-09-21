@@ -39,7 +39,7 @@
     
             <div class="col-md-10 main-content">
                 <h1 class="my-5">Sistema Gestión de Barbería</h1>
-                <h2 class="my-5">Gestión de Citas</h2>
+                <h2 class="my-3">Gestión de Citas</h2>
     
                 <div class="filters mb-4">
                     <select class="form-select d-inline-block" style="width: 150px;">
@@ -56,11 +56,11 @@
                     </select>
                 </div>
     
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead class="table-dark">
+                <div class="table-responsive bg-white" style="margin-left: 20px;">
+                    <table class="table table-striped">
+                        <thead>
                             <tr>
-                                <th>N°</th>
+                                <th>Nº</th>
                                 <th>Empleado</th>
                                 <th>Fecha</th>
                                 <th>Sede</th>
@@ -68,65 +68,41 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-warning">
+                            <tr class="expandable" data-bs-toggle="collapse" data-bs-target="#detalle1" aria-expanded="false">
                                 <td>1</td>
-                                <td>Empleado 1</td>
-                                <td>Fecha</td>
-                                <td>Sede</td>
-                                <td>Tipo de Servicio</td>
+                                <td>Juan Pérez</td>
+                                <td>2024-09-21</td>
+                                <td>Sede 1</td>
+                                <td>Corte de Pelo</td>
                             </tr>
-                            <tr>
+                            <tr id="detalle1" class="collapse">
                                 <td colspan="5">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div>
-                                            <strong>Estado:</strong> Pendiente <span class="text-warning">●</span> <br>
-                                            <strong>Cliente:</strong> Omar Reyna
-                                        </div>
-                                        <div>
-                                            <strong>Turno:</strong> 12:00 - 13:00
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-success btn-sm">Validar Cita</button>
-                                            <button class="btn btn-danger btn-sm">Cancelar Cita</button>
-                                            <button class="btn btn-secondary btn-sm">Editar Cita</button>
-                                        </div>
-                                    </div>
+                                    <strong>Detalles:</strong> Cliente: Ana Rodríguez, Horario: 10:00 AM, Duración: 30 min
                                 </td>
                             </tr>
-                            <tr class="bg-light">
+                            <tr class="expandable" data-bs-toggle="collapse" data-bs-target="#detalle2" aria-expanded="false">
                                 <td>2</td>
-                                <td>Empleado 2</td>
-                                <td>Fecha</td>
-                                <td>Sede</td>
-                                <td>Tipo de Servicio</td>
+                                <td>María López</td>
+                                <td>2024-09-22</td>
+                                <td>Sede 2</td>
+                                <td>Afeitado</td>
                             </tr>
-                            <tr class="bg-danger text-white">
+                            <tr id="detalle2" class="collapse">
+                                <td colspan="5">
+                                    <strong>Detalles:</strong> Cliente: Carlos González, Horario: 11:00 AM, Duración: 45 min
+                                </td>
+                            </tr>
+                            <tr class="expandable" data-bs-toggle="collapse" data-bs-target="#detalle3" aria-expanded="false">
                                 <td>3</td>
-                                <td>Empleado 3</td>
-                                <td>Fecha</td>
-                                <td>Sede</td>
-                                <td>Tipo de Servicio</td>
+                                <td>Pedro Ramírez</td>
+                                <td>2024-09-23</td>
+                                <td>Sede 3</td>
+                                <td>Manicure</td>
                             </tr>
-                            <tr class="bg-success text-white">
-                                <td>4</td>
-                                <td>Empleado 4</td>
-                                <td>Fecha</td>
-                                <td>Sede</td>
-                                <td>Tipo de Servicio</td>
-                            </tr>
-                            <tr class="bg-success text-white">
-                                <td>5</td>
-                                <td>Empleado 5</td>
-                                <td>Fecha</td>
-                                <td>Sede</td>
-                                <td>Tipo de Servicio</td>
-                            </tr>
-                            <tr class="bg-success text-white">
-                                <td>6</td>
-                                <td>Empleado 6</td>
-                                <td>Fecha</td>
-                                <td>Sede</td>
-                                <td>Tipo de Servicio</td>
+                            <tr id="detalle3" class="collapse">
+                                <td colspan="5">
+                                    <strong>Detalles:</strong> Cliente: Luisa Martínez, Horario: 12:00 PM, Duración: 60 min
+                                </td>
                             </tr>
                         </tbody>
                     </table>
