@@ -1,8 +1,14 @@
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+    margin: 0; /* Elimina el margen por defecto */
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #C0AB8D;
+    display: flex;
+    flex-direction: column; /* Organiza los hijos en una columna */
 }
 
 header {
@@ -47,12 +53,13 @@ nav ul li a {
 }
 
 .user-icon img {
-    width: 40px; /* Ajusta el tamaño según sea necesario */
+    width: 40px; 
     height: 40px;
     border-radius: 50%;
 }
 
 main {
+    flex: 1; 
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -113,3 +120,50 @@ footer p {
     padding-top: 10px;
 }
 
+/* SERVICIOS */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+}
+
+.rectangle {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 30%; /* Ajusta este valor según sea necesario */
+    min-height: 500px; /* Ajusta la altura mínima según prefieras */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.estilismo-personalizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.estilismo-personalizado h2 {
+    margin-bottom: 30px;
+    font-size: 28px; /* Aumenta el tamaño del título */
+    color: #333; /* Color más oscuro para mejor contraste */
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Aumentado para más espacio entre imágenes */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 600px; /* Limita el ancho máximo de la galería */
+    margin-top: 30px; /* Espacio adicional arriba de la galería */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Aumentado para imágenes más grandes */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
