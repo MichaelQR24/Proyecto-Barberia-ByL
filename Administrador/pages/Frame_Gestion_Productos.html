@@ -24,19 +24,19 @@
                 </div>
                 <ul class="nav flex-column text-center">
                     <li class="nav-item">
-                        <a href="../pages/menu_administrador_citas.html" class="nav-link"><img src="../img/Citas img.png" alt="Icon 1"></a>
+                        <a href="../pages/Frame_Gestion_Citas.html" class="nav-link"><img src="../img/Citas img.png" alt="Icon 1"></a>
                     </li>
                     <li class="nav-item">
                         <a href="../pages/Frame_Gestion_Proovedor.html" class="nav-link"><img src="../img/Locales img.png" alt="Icon 2"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../pages/menu_administrador_servicios.html" class="nav-link"><img src="../img/Servicios img.png" alt="Icon 3"></a>
+                        <a href="../pages/Frame_Gestion_Servicios.html" class="nav-link"><img src="../img/Servicios img.png" alt="Icon 3"></a>
                     </li>
                     <li class="nav-item">
                         <a href="../pages/Frame_Gestion_Productos.html" class="nav-link"><img src="../img/Productos img.png" alt="Icon 4"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../pages/menu_administrador_aprovisionamiento.html" class="nav-link"><img src="../img/Aprovisionamieto.png" alt="Icon 5"></a>
+                        <a href="../pages/Frame_Generador_Boletas.html" class="nav-link"><img src="../img/Aprovisionamieto.png" alt="Icon 5"></a>
                     </li>
                     <li class="nav-item nav-link_user" style="margin-top: 70px !important;"></li>
                     <a href="#" class="nav-link"><img src="../img/User image.png" alt="Icon 5"></a>
@@ -48,7 +48,7 @@
                 <h1 class="my-5">Sistema Gestión de Barbería</h1>
 
                 <div class="d-flex justify-content-between align-items-start" style="flex-direction: column;">
-                    <button class="btn btn-secondary">Nuevo</button>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto">Nuevo</button>
 
                     <h2 style="margin-top: 20px;">Productos</h2>
                 </div>
@@ -70,6 +70,7 @@
                                 <th>Stock</th>
                                 <th>Sede</th>
                                 <th>Tipo de Servicio</th>
+                                <th>Acciones</th> <!-- Columna para los botones de editar y ver -->
                             </tr>
                         </thead>
                         <tbody>
@@ -79,76 +80,192 @@
                                 <td>100</td>
                                 <td>SJL</td>
                                 <td><a href="#" class="toggle-details" data-target="#details1">Tipo de Servicio</a></td>
+                                <td>
+                                    <button class="btn btn-warning me-2" onclick="cargarDatosEditar('Shampoo', 25.00, 150, 'Sede 1', 'SHAMPOO MARMARA BARBER DE 1150 ML')" data-bs-toggle="modal" data-bs-target="#modalEditarProducto">Editar</button>
+                                    <button class="btn btn-info" onclick="cargarDatosInforme('Shampoo', 25.00, 150, 'Sede 1', 'SHAMPOO MARMARA BARBER DE 1150 ML')" data-bs-toggle="modal" data-bs-target="#modalInformeProducto">Ver</button>
+                                </td> <!-- Botones de editar y ver -->
                             </tr>
-                            <tr id="details1" class="details-row">
-                                <td colspan="5">
-                                    <strong>Descripción:</strong> Shampoo profesional para todo tipo de cabello. <br>
-                                    <strong>Precio:</strong> S/. 15.00
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Cera</td>
-                                <td>59</td>
-                                <td>SJL</td>
-                                <td><a href="#" class="toggle-details" data-target="#details2">Tipo de Servicio</a></td>
-                            </tr>
-                            <tr id="details2" class="details-row">
-                                <td colspan="5">
-                                    <strong>Descripción:</strong> Cera moldeadora para estilos modernos. <br>
-                                    <strong>Precio:</strong> S/. 20.00
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Spray</td>
-                                <td>23</td>
-                                <td>SJL</td>
-                                <td><a href="#" class="toggle-details" data-target="#details3">Tipo de Servicio</a></td>
-                            </tr>
-                            <tr id="details3" class="details-row">
-                                <td colspan="5">
-                                    <strong>Descripción:</strong> Spray fijador para peinados duraderos. <br>
-                                    <strong>Precio:</strong> S/. 18.00
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Polvo Texturizador</td>
-                                <td>54</td>
-                                <td>SJL</td>
-                                <td><a href="#" class="toggle-details" data-target="#details4">Tipo de Servicio</a></td>
-                            </tr>
-                            <tr id="details4" class="details-row">
-                                <td colspan="5">
-                                    <strong>Descripción:</strong> Polvo para agregar textura y volumen al cabello. <br>
-                                    <strong>Precio:</strong> S/. 25.00
-                                </td>
-                            </tr>
+                            <!-- Resto de los productos -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <!-- Modal para añadir producto -->
+    <div class="modal fade" id="modalAgregarProducto" tabindex="-1" aria-labelledby="modalAgregarProductoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAgregarProductoLabel">Añadir Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAgregarProducto">
+                        <div class="mb-3 text-center">
+                            <img src="../img/product.png" alt="Producto" style="width: 100px;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" value="Shampoo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="precio" value="8 Soles" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="stock" class="form-label">Stock:</label>
+                            <input type="number" class="form-control" id="stock" value="100" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sede" class="form-label">Sedes:</label><br>
+                            <input type="radio" id="sede1" name="sede" value="Sede 1" checked> Sede 1
+                            <input type="radio" id="sede2" name="sede" value="Sede 2"> Sede 2
+                            <input type="radio" id="sede3" name="sede" value="Sede 3"> Sede 3
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="descripcion" rows="3" required>SHAMPOO MARMARA BARBER DE 1150 ML</textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarProducto()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para editar producto -->
+    <div class="modal fade" id="modalEditarProducto" tabindex="-1" aria-labelledby="modalEditarProductoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarProductoLabel">Editar Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarProducto">
+                        <div class="mb-3 text-center">
+                            <img src="../img/product.png" alt="Producto" style="width: 100px;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editNombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="editNombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPrecio" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="editPrecio" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editStock" class="form-label">Stock:</label>
+                            <input type="number" class="form-control" id="editStock" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editSede" class="form-label">Sedes:</label><br>
+                            <input type="radio" id="editSede1" name="editSede" value="Sede 1"> Sede 1
+                            <input type="radio" id="editSede2" name="editSede" value="Sede 2"> Sede 2
+                            <input type="radio" id="editSede3" name="editSede" value="Sede 3"> Sede 3
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDescripcion" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="editDescripcion" rows="3" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarEdicionProducto()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para informe del producto -->
+    <div class="modal fade" id="modalInformeProducto" tabindex="-1" aria-labelledby="modalInformeProductoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalInformeProductoLabel">Informe del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formInformeProducto">
+                        <div class="mb-3 text-center">
+                            <img src="../img/product.png" alt="Producto" style="width: 100px;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="infoNombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="infoNombre" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="infoPrecio" class="form-label">Precio:</label>
+                            <input type="text" class="form-control" id="infoPrecio" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="infoStock" class="form-label">Stock:</label>
+                            <input type="number" class="form-control" id="infoStock" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="infoSede" class="form-label">Sedes:</label><br>
+                            <input type="radio" id="infoSede1" name="infoSede" value="Sede 1" disabled> Sede 1
+                            <input type="radio" id="infoSede2" name="infoSede" value="Sede 2" disabled> Sede 2
+                            <input type="radio" id="infoSede3" name="infoSede" value="Sede 3" disabled> Sede 3
+                        </div>
+                        <div class="mb-3">
+                            <label for="infoDescripcion" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="infoDescripcion" rows="3" disabled></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        document.querySelectorAll('.toggle-details').forEach(function (element) {
-            element.addEventListener('click', function (e) {
-                e.preventDefault();
-                var target = document.querySelector(this.getAttribute('data-target'));
-                if (target.style.display === "none" || target.style.display === "") {
-                    target.style.display = "table-row";
-                } else {
-                    target.style.display = "none";
-                }
-            });
-        });
-    </script>
 
+    <script>
+        function cargarDatosEditar(nombre, precio, stock, sede, descripcion) {
+            document.getElementById('editNombre').value = nombre;
+            document.getElementById('editPrecio').value = precio;
+            document.getElementById('editStock').value = stock;
+            document.querySelector(`input[name="editSede"][value="${sede}"]`).checked = true;
+            document.getElementById('editDescripcion').value = descripcion;
+        }
+
+        function guardarEdicionProducto() {
+            const nombre = document.getElementById('editNombre').value;
+            const precio = document.getElementById('editPrecio').value;
+            const stock = document.getElementById('editStock').value;
+            const sede = document.querySelector('input[name="editSede"]:checked').value;
+            const descripcion = document.getElementById('editDescripcion').value;
+
+            console.log({
+                nombre: nombre,
+                precio: precio,
+                stock: stock,
+                sede: sede,
+                descripcion: descripcion
+            });
+
+            var modal = new bootstrap.Modal(document.getElementById('modalEditarProducto'));
+            modal.hide();
+        }
+
+        function cargarDatosInforme(nombre, precio, stock, sede, descripcion) {
+            document.getElementById('infoNombre').value = nombre;
+            document.getElementById('infoPrecio').value = precio;
+            document.getElementById('infoStock').value = stock;
+            document.querySelector(`input[name="infoSede"][value="${sede}"]`).checked = true;
+            document.getElementById('infoDescripcion').value = descripcion;
+        }
+    </script>
+    
 </body>
 
 </html>
